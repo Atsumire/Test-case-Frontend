@@ -77,6 +77,12 @@ a{
     text-align: center;
 }
 
-.decorated_text{width: min-content; margin: 0px 8px;}
+.decorated_text{
+    width: min-content; 
+    margin: 0px 8px;
+    display: flex;
+    /*width: fit-content;*/
+    position: relative;s}
 .decorated_text>span{width: max-content;}
 .decorated_text>img{width: 100%;}
+

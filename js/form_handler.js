@@ -1,24 +1,57 @@
-// Маска телефона: +7 (999) 999-99-99
-document.addEventListener("DOMContentLoaded", function () {
-  const phoneInput = document.getElementById("phone");
+const phoneInput = document.getElementById("phone");
 
-  phoneInput.addEventListener("input", function (e) {
-    let x = phoneInput.value.replace(/\D/g, "").slice(0, 10);
-    let formatted = "+7 ";
+phoneInput.addEventListener("input", maskPhone);
+phoneInput.addEventListener("focus", maskPhone);
+phoneInput.addEventListener("blur", maskPhone);
 
-    if (x.length > 0) {
-      formatted += "(" + x.slice(0, 3);
-    }
-    if (x.length >= 4) {
-      formatted += ") " + x.slice(3, 6);
-    }
-    if (x.length >= 7) {
-      formatted += "-" + x.slice(6, 8);
-    }
-    if (x.length >= 9) {
-      formatted += "-" + x.slice(8, 10);
-    }
+function maskPhone(e) {
+  let keyCode;
+  if (e.keyCode) keyCode = e.keyCode;
 
-    phoneInput.value = formatted;
-  });
+  let pos = phoneInput.selectionStart;
+  if (pos < 3) e.preventDefault();
+
+  let matrix = "+7 (___) ___-__-__",
+      i = 0,
+      def = matrix.replace(/\D/g, ""),
+      val = phoneInput.value.replace(/\D/g, ""),
+      newValue = matrix.replace(/[_\d]/g, function (a) {
+        return i < val.length ? val.charAt(i++) : a;
+      });
+
+  i = newValue.indexOf("_");
+  if (i !== -1) {
+    newValue = newValue.slice(0, i);
+  }
+
+  let reg = new RegExp("^" + matrix
+    .substr(0, phoneInput.value.length)
+    .replace(/_+/g, "\\d{1," + "$&".length + "}")
+    .replace(/[+()]/g, "\\$&") + "$");
+
+  if (!reg.test(phoneInput.value) || phoneInput.value.length < 5 || keyCode > 47 && keyCode < 58) {
+    phoneInput.value = newValue;
+  }
+
+  if (e.type === "blur" && phoneInput.value.length < 17) {
+    phoneInput.value = "";
+  }
+}
+
+// === Валидация формы ===
+const form = document.getElementById("contact-form");
+const messageArea = document.getElementById("message-area");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // предотвращаем отправку формы
+
+  const name = document.getElementById("name").value.trim();
+  const phone = phoneInput.value.trim();
+
+  if (name === "" || phone.length !== 18) {
+    alert("Пожалуйста, заполните имя и корректный номер телефона.");
+    return;
+  }
+
+  messageArea.style.display = "block";
 });
