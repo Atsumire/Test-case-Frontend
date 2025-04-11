@@ -25,6 +25,9 @@
     font-family: "Eastman-Regular", sans-serif;
     position: relative;
 }
+a{
+    cursor: pointer;
+}
 .semitransparent_text{
     color: rgb(50 50 49 / 50%);
 }
@@ -70,6 +73,10 @@
     font-weight: 400;
 }
 
-.decorated_text{width: min-content;}
+.center_text{
+    text-align: center;
+}
+
+.decorated_text{width: min-content; margin: 0px 8px;}
 .decorated_text>span{width: max-content;}
 .decorated_text>img{width: 100%;}

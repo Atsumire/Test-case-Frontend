@@ -23,7 +23,8 @@
     font-weight: 500;
     position: relative;
     cursor: pointer;
-    max-width: fit-content;
+    width: fit-content;
+    border: none;
 }
 .orange_button:hover{
     background: #CF361F;
@@ -153,4 +154,32 @@
     top: -75px;
     transform: rotate(0deg) scale(1, 1);
     object-fit: cover;
+}
+
+form {
+    background: #ffe8c7;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+form input {
+    border: none;
+    border-bottom: solid;
+    background: none;
+}
+.form-row>*{
+    width: 45%;
+}
+.form-row.container.cont_space {
+    display: flex;
+    align-items: flex-end;
+}
+form button {
+    width: 100% !important;
 }
