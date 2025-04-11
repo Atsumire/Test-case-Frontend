@@ -1,0 +1,76 @@
+a 
+.h-link {
+    color: rgba(50, 50, 49, 0.7);
+    text-align: left;
+    font-family: "Eastman-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+.h-link:hover{
+    color: #E13B22;
+}
+.tel {
+    color: #323231;
+    text-align: left;
+    font-family: "Eastman-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.standart_text, a{
+    color: #323231;
+    text-align: left;
+    font-family: "Eastman-Regular", sans-serif;
+    position: relative;
+}
+.semitransparent_text{
+    color: rgb(50 50 49 / 50%);
+}
+
+.h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 900;
+}
+.h2{
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: 900;
+}
+.h3{
+    font-size: 24px;
+    font-weight: 900;
+}
+.h4{
+    font-family: "Eastman-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.h5{
+    font-size: 16px;
+    /*line-height: 52px;*/
+    font-weight: 900;
+}
+
+.p14 {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.p16{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.p18{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.decorated_text{width: min-content;}
+.decorated_text>span{width: max-content;}
+.decorated_text>img{width: 100%;}
