@@ -81,7 +81,7 @@ a{
     width: min-content; 
     margin: 0px 8px;
     display: flex;
-    /*width: fit-content;*/
+    width: fit-content;
     position: relative;s}
 .decorated_text>span{width: max-content;}
 .decorated_text>img{width: 100%;}

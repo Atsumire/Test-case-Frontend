@@ -103,9 +103,6 @@
 .block3_r{
     width: 30%;
 }
-.decoration_cont{
-    
-}
 .decoration{position: absolute; }
 .decoration.under {top: 45px;}
 .decoration.central{top: 5px;}
