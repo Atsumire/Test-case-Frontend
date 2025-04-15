@@ -292,7 +292,7 @@ body {
 
 #block8{
     width: 100vw;
-    overflow: hidden;
+    overflow: scroll;
     background: #ffffff;
     padding: 0px 0px 80px 0px;
     display: flex;

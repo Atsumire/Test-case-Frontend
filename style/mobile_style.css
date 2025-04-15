@@ -1,12 +1,6 @@
 @media screen and (max-width: 431px){
 	.h-link {
-	    color: rgba(50, 50, 49, 0.7);
-	    text-align: left;
-	    font-family: "Eastman-Medium", sans-serif;
-	    font-size: 14px;
-	    font-weight: 500;
-	    position: relative;
-	    cursor: pointer;
+		cursor: pointer;
 	}
 	.h-link:hover{
 	    color: #E13B22;
@@ -107,13 +101,15 @@
 	    display: flex;
 	    flex-direction: row;
 	    align-items: center;
-	    justify-content: space-between;
+	    justify-content: center;
 	    align-self: stretch;
 	    position: relative;
 	    border-style: solid;
 	    border-color: #e9e9e7;
 	    border-width: 0px 0px 1px 0px;
-	    padding: 0px 80px;
+	    padding: 0px 16px;
+	    flex-wrap: wrap;
+	    gap: 24px;
 	}
 	.header>*, .footer>*{
 	    display: flex;
@@ -377,7 +373,7 @@
 
 	#block8{
 	    width: 100vw;
-	    overflow: hidden;
+	    overflow: scroll;
 	    background: #ffffff;
 	    padding: 0px 0px 80px 0px;
 	    display: flex;
@@ -402,9 +398,9 @@
 	    position: relative;
 	}
 	#block10_f2 {
-	    /*width: 400px;*/
-	    height: 750px;
-	    column-width: 350px;
+	    width: 340px;
+	    height: fit-content;
+	    column-width: 340px;
 	    column-gap: 12px;
 	}
 	.review-card{
@@ -422,8 +418,8 @@
 
 	#block11>div {
 	    background: #faf8f4;
-	    border-radius: 80px;
-	    padding: 60px 40px 60px 40px;
+	    border-radius: 50px;
+	    padding: 30px 15px 30px 15px;
 	}
 	#block12{
 	    padding-top: 0px;
