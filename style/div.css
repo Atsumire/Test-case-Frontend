@@ -68,9 +68,9 @@ body {
     align-self: center;
 }
 .cont_vertical { flex-direction: column; }
-.cont_hor_60{ width: 50%; }
-.cont_hor_40{ width: 30%; }
-.cont_hor_50{ width: 40%; }
+.cont_hor_60{ width: 55%; }
+.cont_hor_40{ width: 35%; }
+.cont_hor_50{ width: 45%; }
 
 .white_block{background: #ffffff;}
 .beige_block{background: #FAF8F4;}
